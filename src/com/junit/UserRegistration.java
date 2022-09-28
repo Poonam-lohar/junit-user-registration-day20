@@ -17,6 +17,8 @@ public class UserRegistration {
         String MobNo = scan.nextLine();
         System.out.println("Enter password:");
         String password = scan.nextLine();
+        System.out.println("Enter Email");
+        String email = scan.nextLine();
 
         System.out.println("first name is : " + firstName);
         System.out.println("first name is : " + firstName(firstName));
@@ -27,6 +29,7 @@ public class UserRegistration {
         System.out.println("mobile number is : " + MobNo);
         System.out.println("mobile number is : " + MobNo(MobNo));
         System.out.println("Password is " + password(password));
+        System.out.println("Email is  " + email(email));
     }
 
     private static boolean firstName(String firstName) {
@@ -43,6 +46,9 @@ public class UserRegistration {
 
     private static boolean MobNo(String MobNo) {
         return MobNo.matches("^(91)\\s{1}[7-9]{1}[0-9]{9}$");
+    }
+    private static boolean email(String validemail) {
+        return validemail.matches ("^(abc)[0-9+-]*(@)[0-9a-z]{1,}(.com){1,}(.au)*$|^(abc)[0-9+-]*(@)[0-9a-z]{1,}(.net){1}$");
     }
 
     public static boolean password(String password) {
