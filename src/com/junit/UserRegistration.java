@@ -32,11 +32,11 @@ public class UserRegistration {
         System.out.println("Email is  " + email(email));
     }
 
-    private static boolean firstName(String firstName) {
+    static boolean firstName(String firstName) {
         return firstName.matches("[A-Z]{1}[a-z]{3,}");
     }
 
-    private static boolean lastName(String lastName) {
+    static boolean lastName(String lastName) {
         return lastName.matches("[A-Z]{1}[a-z]{3,}");
     }
 
@@ -44,10 +44,10 @@ public class UserRegistration {
         return Email.matches("^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
     }
 
-    private static boolean MobNo(String MobNo) {
+    static boolean MobNo(String MobNo) {
         return MobNo.matches("^(91)\\s{1}[7-9]{1}[0-9]{9}$");
     }
-    private static boolean email(String validemail) {
+    static boolean email(String validemail) {
         return validemail.matches ("^(abc)[0-9+-]*(@)[0-9a-z]{1,}(.com){1,}(.au)*$|^(abc)[0-9+-]*(@)[0-9a-z]{1,}(.net){1}$");
     }
 
