@@ -10,15 +10,23 @@ public class UserRegistration {
         String firstName = scan.nextLine();
         System.out.println("Enter last name:  ");
         String lastName = scan.nextLine();
+        Scanner mail = new Scanner(System.in);
+        System.out.println("Enter your email : ");
+        String Email = mail.nextLine();
         System.out.println("first name is : " + firstName);
         System.out.println("first name is : " + firstName(firstName));
         System.out.println("first name is : " + lastName);
         System.out.println("first name is : " + lastName(lastName));
+        System.out.println("EmailID is : " + Email);
+        System.out.println("EmailID is : " + Email(Email));
     }
         private static boolean firstName (String firstName){
             return firstName.matches("[A-Z]{1}[a-z]{3,}");
         }
         private static boolean lastName(String lastName) {
         return lastName.matches("[A-Z]{1}[a-z]{3,}");
+    }
+    public static boolean Email(String Email) {
+        return Email.matches("^[a-zA-Z0-9]+([+_.-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]{2,4}([.][a-zA-Z]{2,4})?");
     }
     }
